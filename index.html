@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio — Juan Dela Cruz">
+  <title>Juan Dela Cruz · portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#hero" class="skip-link">Skip to content</a>
+
+  <canvas id="grid-canvas"></canvas>
+
+  <!-- === FLOATING TECH ICONS === -->
+  <div class="floating-icons">
+    <div class="floating-icon floating-icon--1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+    <div class="floating-icon floating-icon--2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+    <div class="floating-icon floating-icon--3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 14 17 24 7"/><circle cx="4" cy="7" r="3"/><circle cx="14" cy="17" r="3"/><circle cx="24" cy="7" r="3"/></svg></div>
+    <div class="floating-icon floating-icon--4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+    <div class="floating-icon floating-icon--5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+    <div class="floating-icon floating-icon--6" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+    <div class="floating-icon floating-icon--7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+    <div class="floating-icon floating-icon--8" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+  </div>
+
+  <div class="content">
+    <nav class="nav" id="nav" role="navigation" aria-label="Main">
+      <div class="nav__inner">
+        <span class="nav__logo">JD</span>
+        <div class="nav__links">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#projects" class="nav__link">Work</a>
+          <a href="#skills" class="nav__link">Stack</a>
+          <a href="#experience" class="nav__link">Log</a>
+          <a href="#contact" class="nav__link">Reach</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ═══ HERO ═══ -->
+      <section id="hero" class="section section--hero">
+        <div class="hero__robot" aria-hidden="true">
+          <svg width="130" height="170" viewBox="0 0 130 170" fill="none">
+            <defs>
+              <linearGradient id="rg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="30%" stop-color="#eef0f6"/>
+                <stop offset="100%" stop-color="#c8cad6"/>
+              </linearGradient>
+              <linearGradient id="rs" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+                <stop offset="30%" stop-color="#ffffff" stop-opacity="0.05"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <g opacity="0.85">
+              <line x1="65" y1="6" x2="65" y2="28" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="65" cy="4" r="7" fill="rgba(106,140,255,0.1)"/>
+              <circle cx="65" cy="4" r="3" fill="rgba(106,140,255,0.8)"/>
+              <rect x="16" y="28" width="98" height="72" rx="14" fill="rgba(0,0,0,0.08)" transform="translate(2,2)"/>
+              <rect x="16" y="28" width="98" height="72" rx="14" fill="url(#rg)"/>
+              <rect x="16" y="28" width="98" height="72" rx="14" fill="url(#rs)" opacity="0.4"/>
+              <rect x="28" y="44" width="74" height="36" rx="8" fill="#080810"/>
+              <rect x="28" y="44" width="74" height="36" rx="8" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+              <circle cx="48" cy="62" r="4.5" fill="#6a8cff" opacity="0.85"/>
+              <circle cx="82" cy="62" r="4.5" fill="#6a8cff" opacity="0.85"/>
+              <circle cx="48" cy="62" r="1.8" fill="#fff" opacity="0.6"/>
+              <circle cx="82" cy="62" r="1.8" fill="#fff" opacity="0.6"/>
+              <line x1="50" y1="72" x2="80" y2="72" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="26" y="106" width="78" height="46" rx="10" fill="url(#rg)"/>
+              <rect x="26" y="106" width="78" height="46" rx="10" fill="url(#rs)" opacity="0.25"/>
+              <line x1="38" y1="120" x2="92" y2="120" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+              <circle cx="65" cy="130" r="3.5" fill="#6a8cff" opacity="0.25"/>
+              <rect x="6" y="114" width="17" height="7" rx="3.5" fill="url(#rg)" opacity="0.8"/>
+              <rect x="107" y="114" width="17" height="7" rx="3.5" fill="url(#rg)" opacity="0.8"/>
+              <rect x="36" y="156" width="18" height="9" rx="4.5" fill="url(#rg)" opacity="0.7"/>
+              <rect x="76" y="156" width="18" height="9" rx="4.5" fill="url(#rg)" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero__inner">
+          <div class="pixel-bubble">
+            <span class="pixel-bubble__text">Hello, world!</span>
+            <span class="pixel-bubble__dot"></span>
+          </div>
+          <h1 class="chrome-text">Juan Dela Cruz</h1>
+          <p class="chrome-sub"><span>[</span> Cloud &amp; Systems Engineer <span>]</span></p>
+          <p class="hero__tagline">I build cloud-native systems and developer tools — focused on infrastructure, automation, and distributed systems.</p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View work</a>
+            <a href="#contact" class="btn btn--ghost">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass-divider"></div>
+
+      <!-- ═══ ABOUT (01) ═══ -->
+      <section id="about" class="section section--glass" data-reveal>
+        <div class="section__inner">
+          <div class="glass-card">
+            <div class="glass-card__header">
+              <span class="glass-card__number">01</span>
+              <h2 class="glass-card__title">About</h2>
+            </div>
+            <div class="prose">
+              <p>I'm a computer science student at the <strong>University of the Philippines</strong>, building software that scales. My focus is on cloud infrastructure, distributed systems, and developer tooling — the kind of work that makes other engineers more productive.</p>
+              <p>Outside of code, I'm usually reading about system design, contributing to open source projects, or experimenting with homelab setups. I believe great infrastructure is invisible: when everything just works, you're free to build what matters.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass-divider"></div>
+
+      <!-- ═══ PROJECTS (02) ═══ -->
+      <section id="projects" class="section section--glass" data-reveal>
+        <div class="section__inner">
+          <div class="glass-card">
+            <div class="glass-card__header">
+              <span class="glass-card__number">02</span>
+              <h2 class="glass-card__title">Projects</h2>
+            </div>
+            <p class="glass-card__lede">Things I've built — from quick experiments to longer efforts.</p>
+            <div class="project-grid">
+              <article class="project-card">
+                <div class="project-card__top">
+                  <h3 class="project-card__title">Kronos</h3>
+                  <div class="project-card__links">
+                    <a href="#" class="project-card__link" aria-label="Source code"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                  </div>
+                </div>
+                <p class="project-card__desc">Distributed task scheduler with priority queues, retry logic, and real-time monitoring dashboards for high-throughput microservice environments.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Go</span>
+                  <span class="tag">Redis</span>
+                  <span class="tag">WebSocket</span>
+                  <span class="tag">Prometheus</span>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-card__top">
+                  <h3 class="project-card__title">Envault</h3>
+                  <div class="project-card__links">
+                    <a href="#" class="project-card__link" aria-label="Source code"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                  </div>
+                </div>
+                <p class="project-card__desc">Environment-aware secret management CLI with AES-256 encryption, Git integration, and team sync. Ships as a single binary with zero external dependencies.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Rust</span>
+                  <span class="tag">AES-256</span>
+                  <span class="tag">CLI</span>
+                  <span class="tag">Git</span>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-card__top">
+                  <h3 class="project-card__title">Stratos</h3>
+                  <div class="project-card__links">
+                    <a href="#" class="project-card__link" aria-label="Source code"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                  </div>
+                </div>
+                <p class="project-card__desc">Lightweight Kubernetes dashboard for multi-cluster monitoring with 60% less resource overhead. Features live pod streaming and topology views.</p>
+                <div class="project-card__tags">
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Kubernetes</span>
+                  <span class="tag">WebSocket</span>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-card__top">
+                  <h3 class="project-card__title">Aether</h3>
+                  <div class="project-card__links">
+                    <a href="#" class="project-card__link" aria-label="Source code"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                  </div>
+                </div>
+                <p class="project-card__desc">Declarative static site generator for documentation. Markdown-to-HTML with live preview, custom themes, and one-command deploy to S3 or Cloudflare.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Markdown</span>
+                  <span class="tag">Jinja2</span>
+                  <span class="tag">AWS</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass-divider"></div>
+
+      <!-- ═══ SKILLS (03) ═══ -->
+      <section id="skills" class="section section--glass" data-reveal>
+        <div class="section__inner">
+          <div class="glass-card">
+            <div class="glass-card__header">
+              <span class="glass-card__number">03</span>
+              <h2 class="glass-card__title">Stack</h2>
+            </div>
+            <p class="glass-card__lede">Technologies and tools I work with.</p>
+            <div class="skills-wrapper">
+              <div class="skill-card">
+                <h3 class="skill-card__title">Languages</h3>
+                <div class="skill-card__items">
+                  <span class="tag">Go</span>
+                  <span class="tag">Rust</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">SQL</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <h3 class="skill-card__title">Infrastructure</h3>
+                <div class="skill-card__items">
+                  <span class="tag">Kubernetes</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Terraform</span>
+                  <span class="tag">Linux</span>
+                  <span class="tag">GitHub Actions</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <h3 class="skill-card__title">Frameworks</h3>
+                <div class="skill-card__items">
+                  <span class="tag">React</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">Redis</span>
+                  <span class="tag">Prometheus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass-divider"></div>
+
+      <!-- ═══ EXPERIENCE (04) ═══ -->
+      <section id="experience" class="section section--glass" data-reveal>
+        <div class="section__inner">
+          <div class="glass-card">
+            <div class="glass-card__header">
+              <span class="glass-card__number">04</span>
+              <h2 class="glass-card__title">Log</h2>
+            </div>
+            <p class="glass-card__lede">Education, work, and events.</p>
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="timeline__item__head">
+                  <span class="timeline__item__date">2024</span>
+                  <h3 class="timeline__item__title">Software Engineering Intern</h3>
+                </div>
+                <p class="timeline__item__org">Vercel</p>
+                <p class="timeline__item__desc">Built internal tooling for deployment pipeline monitoring. Reduced mean-time-to-detect by 40% with custom alert routing. Contributed to the Next.js core team.</p>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__item__head">
+                  <span class="timeline__item__date">2023–24</span>
+                  <h3 class="timeline__item__title">CS Research Assistant</h3>
+                </div>
+                <p class="timeline__item__org">University of the Philippines</p>
+                <p class="timeline__item__desc">Researched distributed consensus algorithms in geo-distributed environments. Published findings on latency optimization in Raft-based systems.</p>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__item__head">
+                  <span class="timeline__item__date">2023</span>
+                  <h3 class="timeline__item__title">Open Source Contributor</h3>
+                </div>
+                <p class="timeline__item__org">Kubernetes · SIG-Instrumentation</p>
+                <p class="timeline__item__desc">Built a custom metrics dashboard exporter and improved documentation for the Kubernetes metrics API across multiple release cycles.</p>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__item__head">
+                  <span class="timeline__item__date">2023</span>
+                  <h3 class="timeline__item__title">Hackathon Winner</h3>
+                </div>
+                <p class="timeline__item__org">HackMIT</p>
+                <p class="timeline__item__desc">Built a real-time collaborative debugging tool using WebRTC and CRDTs. Won "Best Infrastructure" and "People's Choice" awards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass-divider"></div>
+
+      <!-- ═══ CONTACT (05) ═══ -->
+      <section id="contact" class="section section--glass" data-reveal>
+        <div class="section__inner">
+          <div class="glass-card glass-card--contact">
+            <div class="glass-card__header glass-card__header--center">
+              <span class="glass-card__number">05</span>
+              <h2 class="glass-card__title">Reach</h2>
+            </div>
+            <p style="color: var(--color-text-muted); font-size: 0.8125rem; max-width: 48ch; margin: 0 auto var(--space-xl);">Want to work together, collaborate on something, or just say hi? Drop me a message — I'd love to hear from you.</p>
+            <div class="contact__actions">
+              <a href="mailto:juan@example.com" class="btn btn--primary">Send signal</a>
+            </div>
+            <div class="contact__social">
+              <a href="#" class="contact__social-link" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span>GitHub</span></a>
+              <a href="#" class="contact__social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span>LinkedIn</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">&copy; 2026 Juan Dela Cruz · system online</p>
+    </footer>
+  </div>
+
+  <button class="to-top" id="to-top" aria-label="Scroll to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
